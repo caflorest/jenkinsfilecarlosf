@@ -1,7 +1,7 @@
 pipeline {
 	agent any
 	    environment {
-        	EXECUTE = "false"
+        	EXECUTE = "true"
 	    }
 		    stages {
 			    stage('First') {
@@ -25,6 +25,9 @@ pipeline {
 		    	}
 
 			    stage('Third') {
+				    when {
+					    enviroment name: "EXECUTE" , value: "false"
+				    }
 				    steps {
 				    	sh '''
 					    	echo "Step Three"
