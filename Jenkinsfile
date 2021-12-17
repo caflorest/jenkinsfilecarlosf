@@ -8,7 +8,7 @@ pipeline {
 				steps {
 					echo "DISABLE_AUTH is ${DISABLE_AUTH}"
 					sh '''
-						echo "Step One"
+						echo "Updating Second Stage"
 					'''
 				}
 			}
