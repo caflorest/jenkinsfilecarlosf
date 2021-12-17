@@ -1,8 +1,12 @@
 pipeline {
 	agent any
+	environment {
+        DISABLE_AUTH = 'true'
+    }
 		stages {
 			stage('One') {
 				steps {
+					echo "DISABLE_AUTH is ${DISABLE_AUTH}"
 					sh '''
 						echo "Step One"
 					'''
