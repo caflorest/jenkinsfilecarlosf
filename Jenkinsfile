@@ -19,7 +19,6 @@ pipeline {
 					'''
 				}
 			} 
-		}
 			stage('Third') {
 				steps {
 					sh '''
