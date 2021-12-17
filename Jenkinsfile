@@ -14,15 +14,15 @@ pipeline {
 			}
 
 			stage('Second') {
-			when {
-				expression {
-					env.execute == true
-				}
+			    when {
+				    expression {
+					    env.execute == true
+				    }
 
-				steps {
-					sh '''
+				    steps {
+					    sh '''
 						echo "Updating Second Stage"
-					'''
+					    '''
 					}
 				}
 			}
@@ -34,5 +34,5 @@ pipeline {
 					'''
 				}
 			}
-		
- 	}
+        }
+}	
