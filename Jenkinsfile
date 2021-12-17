@@ -4,7 +4,7 @@ pipeline {
 			stage('First') {
 				steps {
 					script {
-						env.execute = true
+						env.execute = "true"
 					}
 					echo "${env.execute}"
 					sh '''
