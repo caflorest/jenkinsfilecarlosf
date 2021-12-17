@@ -23,6 +23,7 @@ pipeline {
 					sh '''
 						echo "Updating Second Stage"
 					'''
+					}
 				}
 			}
 
