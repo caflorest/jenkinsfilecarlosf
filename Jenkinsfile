@@ -1,12 +1,12 @@
 pipeline {
 	agent any
 	    environment {
-        	execute = "true"
-   	    
+        	EXECUTE = "true"
+	    }
 		    stages {
 			    stage('First') {
 				    steps {
-				        echo "${execute}"
+				        echo "${EXECUTE}"
 				        sh '''
 					    echo "Step one"
 				    	'''
@@ -15,7 +15,7 @@ pipeline {
 
 			    stage('Second') {
 			        when {
-				       environment name: "execute" , value: "true"
+				       environment name: "EXECUTE" , value: "true"
 			        }
                     steps {
 				    	sh '''
@@ -31,6 +31,5 @@ pipeline {
 					    '''
 				    }
                  }
-            }
         }
 }	
