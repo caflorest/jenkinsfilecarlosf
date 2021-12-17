@@ -26,7 +26,7 @@ pipeline {
 
 			    stage('Third') {
 				    when {
-					    enviroment name: "EXECUTE" , value: "false"
+					    environment name: "EXECUTE" , value: "false"
 				    }
 				    steps {
 				    	sh '''
