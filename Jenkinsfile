@@ -12,8 +12,6 @@ pipeline {
 					'''
 					}
 				}
-			}
-
 
 			stage('Second') {
 				steps {
