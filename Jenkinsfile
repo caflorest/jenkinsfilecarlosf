@@ -11,7 +11,7 @@ pipeline {
 					'''
 					}
 				}
-
+			}
 			stage('Second') {
 				steps {
 					sh '''
@@ -19,7 +19,7 @@ pipeline {
 					'''
 				}
 			} 
-
+		}
 			stage('Third') {
 				steps {
 					sh '''
@@ -28,4 +28,3 @@ pipeline {
 				}
 			}
 		}
-	}
