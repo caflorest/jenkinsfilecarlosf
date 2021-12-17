@@ -4,7 +4,7 @@ pipeline {
         DISABLE_AUTH = 'true'
     }
 		stages {
-			stage('One') {
+			stage('First') {
 				steps {
 					echo "DISABLE_AUTH is ${DISABLE_AUTH}"
 					sh '''
@@ -14,7 +14,7 @@ pipeline {
 			}
 
 
-			stage('Two') {
+			stage('Second') {
 				steps {
 					sh '''
 						echo "Step Two"
@@ -22,7 +22,7 @@ pipeline {
 				}
 			} 
 
-			stage('Three') {
+			stage('Third') {
 				steps {
 					sh '''
 						echo "Step Three"
