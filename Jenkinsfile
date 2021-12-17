@@ -1,12 +1,12 @@
 pipeline {
 	agent any
 	environment {
-        DISABLE_AUTH = 'true'
+        execute = "true"
     }
 		stages {
 			stage('First') {
 				steps {
-					echo "DISABLE_AUTH is ${DISABLE_AUTH}"
+					echo "${env.execute}"
 					sh '''
 						echo "Updating Second Stage"
 					'''
