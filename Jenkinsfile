@@ -8,23 +8,23 @@ pipeline {
 					}
 					echo "${env.execute}"
 					sh '''
-						echo "Updating Second Stage"
+						echo "Step one"
 					'''
 				}
 			}
 
-
-			stage('Second')
+			stage('Second') {
 			when {
 				expression {
 					env.execute == true
 				}
+
 				steps {
 					sh '''
-						echo "Step Two"
+						echo "Updating Second Stage"
 					'''
 				}
-			} 
+			}
 
 			stage('Third') {
 				steps {
