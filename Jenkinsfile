@@ -4,7 +4,7 @@ pipeline {
 			stage('First') {
 				steps {
 					script {
-						env.execute="true"
+						env.execute = true
 					}
 					echo "${env.execute}"
 					sh '''
@@ -19,7 +19,6 @@ pipeline {
 				expression {
 					env.execute == true
 				}
-			}
 				steps {
 					sh '''
 						echo "Step Two"
