@@ -2,16 +2,20 @@
 pipeline {
 	agent any
 		stages {
-			stage('One') {
+			stage('First') {
 				steps {
+					script {
+						 env.variable="step one"
+				
 					sh '''
-						echo "Step One"
+						echo "${env.variable}"
 					'''
+					}
 				}
 			}
 
 
-			stage('Two') {
+			stage('Second') {
 				steps {
 					sh '''
 						echo "Step Two"
@@ -19,7 +23,7 @@ pipeline {
 				}
 			} 
 
-			stage('Three') {
+			stage('Third') {
 				steps {
 					sh '''
 						echo "Step Three"
