@@ -1,14 +1,13 @@
 
 pipeline {
 	agent any
+	environment {
+		executor_number= "step one"
 		stages {
 			stage('First') {
 				steps {
-					script {
-						 env.variable="step one"
-				
 					sh '''
-						echo "${env.variable}"
+						echo "${env.executor_number}"
 					'''
 					}
 				}
