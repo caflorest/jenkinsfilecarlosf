@@ -3,6 +3,7 @@ pipeline {
 	agent any
 	environment {
 		executor_number= "step uno"
+	}
 		stages {
 			stage('First') {
 				steps {
