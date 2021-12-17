@@ -1,6 +1,4 @@
 
-	#este es un pipeline para el challenge devops dec16
-	
 pipeline {
 	agent any
 		stages {
